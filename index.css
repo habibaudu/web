@@ -2,20 +2,22 @@
     margin :0px;
     padding :0px;
     box-sizing: border-box;
+    
 }
 
 nav{
+    margin-bottom: 3%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 10vh;
     font-family: 'Poppins',sans-serif;
-    background-color: #35424a;
-    border-bottom: rgb(226,226,226) 3px solid;  
+    background-color: #080f5b;
+    border-bottom: #e4c580 1.4px dashed;  
 }
 
 .logo{
-    color:rgb(226,226,226);
+    color:#66fcf1;
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 20px;
@@ -32,7 +34,7 @@ nav{
 }
 
 .nav-links a{
-    color:rgb(226,226,226);
+    color:#e4c580;
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
@@ -47,36 +49,97 @@ nav{
 .burger div{
     width:25px;
     height:3px;
-    background-color:rgb(226,226,226);
+    background-color:#e4c580;
     margin: 5px;
     transition: all 0.3s ease;
    }
 
 .highlight,.current a{
-    color:rgb(247, 116, 2);
+    color:rgb(160, 12, 1);
     font-weight:bold;  
  }
 
-.loginbox{
-    margin-top: 4%;
-    width:45%;
-    height:420px;
-    background: #35424a;
-    color:#fff;
-    top:50%;
-    left:50%;
-    position: absolute;
-    transform:translate(-50%,-50%);
+ /*Login form here*/
+ .log_head h1{
+     margin:0;
+     padding: 0 0 20px; 
+     text-align: center;
+     font-size: 22px;
+     color:#e4c580;
+
+  } 
+.formbox{
+    margin:auto; 
+    width:55%;
+    /* height:420px; */
+    background-color: #080f5b;
+    color:#e4c580;
     box-sizing: border-box;
-    padding: 70px 30px;
+    padding: 55px 30px;
+    border-radius: 7px;
+    /* border:1.5px  dashed rgb(226,226,226); */
+    box-shadow:  inset 2px  2px 10px rgb(226,226,226);
 }
+
+.formbox p{
+    margin :0;
+    padding: 0;
+    font-weight: bold;
+    color:#66fcf1;
+}
+.formbox input{
+    width :100%;
+    margin-bottom: 20px;
+
+}
+
+.formbox input[type = 'text'],input[type ='password']
+ ,input[type ='email']{
+    border:none;
+    border-bottom: 1px solid #e4c580;
+    background:transparent;
+    outline : none;
+    height:40px;
+    color :#e4c580;
+    font-size: 16px;
+}
+
+.formbox input[type ='submit']{
+    border:none;
+    outline: none;
+    height:40px;
+    background:#e4c580;
+    color:rgb(160, 12, 1);
+    letter-spacing: 3px;
+    font-size: 18px;
+    border-radius: 9px;
+
+
+}
+
+.formbox input[type = 'submit']:hover{
+    cursor: pointer;
+    background: rgb(160, 12, 1);
+    color: #35424a;   
+   }
+
+.formbox a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color : #66fcf1
+}
+
+.formbox a:hover{
+    color:rgb(160, 12, 1);
+   }
 
 .avater{
     widows: 100px;
     height: 100px;
     border-radius: 50%;
     position: absolute;
-    top:-50px;
+    top:50px;
     left: calc(50% - 50px);
 }
 
@@ -85,7 +148,7 @@ header img {
     height:470px;
 }
 header{
-    width: 90%;
+    width: 80%;
     margin: auto;
     /* text-align: center;
     color:white;
@@ -93,7 +156,7 @@ header{
 }
 a.btn {
     text-decoration: none;
-    background-color: rgb(247, 116, 2);
+    background-color: rgb(160, 12, 1);
     margin-top: 1em;
     text-align: center;
     display: inline-block;
@@ -108,11 +171,11 @@ a.btn {
 }
 a.btn2 {
     text-decoration: none;
-    background-color: rgb(247, 116, 2);
+    background-color: rgb(160, 12, 1);
     margin-bottom: 1em;
     text-align: center;
     display: inline-block;
-    color:rgb(226,226,226);
+    color:#e4c580;
     padding: 15px 30px;
     border-radius: 7px;
     letter-spacing: 4px;
@@ -123,70 +186,116 @@ a.btn2 {
 }
 #contact_form input[type=text]{
     width: 100%;
-    padding: 2.5% 2.5%;
-    margin: 8px 0;
+    padding: 2.8% 2.8%;
+    margin-top: 2%;
     font-size: 100%;
     display: inline-block;
-    color:#35424a;
+    color:#e4c580;
     border:none;
+    border-radius: 4px;
    
-    background-color:rgb(226,226,226);
+    background-color:#0d19a3;
     box-sizing: border-box;
+}
+
+#contact_form input[type ='submit']{
+    border:none;
+    outline: none;
+    height:40px;
+    background:#0d19a3;
+    color:#66fcf1;
+    letter-spacing: 3px;
+    font-size: 18px;
+    border-radius: 9px;
+
+
 }
 #contact_form textarea{
  width:100%;
- padding: 6% 6%;
- margin-top: 1%;
+ padding: 7% 7%;
+ margin-top: 2%;
  border: none;
- background-color: rgb(226,226,226);
+ border-radius: 4px;
+ background-color: #0d19a3;
 
 }
-#contact_form input[type=email]{
+#contact_form input[type= email]{
     width: 100%;
-    padding: 2.5% 2.5%;
-    margin: 8px 0;
-    color:#35424a;
+    padding: 2.8% 2.8%;
+    margin-top: 2%;
     font-size: 100%;
-    border:none;
-    background-color:rgb(226,226,226);
     display: inline-block;
+    color:#e4c580;
+    border:none;
+    border-radius: 4px;
+   
+    background-color:#0d19a3;
     box-sizing: border-box;
 }
 
 .btn_contact{
     width:100%;
-    padding: 2.5% 2.5%;
+    padding: 2.8% 2.8%;
     border: none;
     font-size: 100%;
     letter-spacing:1%;
     box-sizing: border-box;
-    margin-top: 1%;
-    
-	color:rgb(226,226,226);
-
-	background-color: #35424a;
+    margin-top: 2%;
+    border-radius: 4px;
+    cursor: pointer;
+	color:#e4c580;
+    background-color: rgb(160, 12, 1);
+	/* background-color:rgb(193, 16, 3); */
 	/* background:-o-linear-gradient(#F7CA18, #302754);
 	background:-moz-linear-gradient(#F7CA18, #302754); */
     
 }
 
 .contact{
-     color:rgb(226,226,226) ;
+     color:#e4c580; 
      text-align: center;
      font-size: 180%;
-     text-shadow:1px 1px 1px #ddd;
+     text-shadow:0.4px 0.4px 0.4px #ddd;
+     margin-bottom: 0.8em;
 }
 .contact_container{
-   width:60%;
+   width:50%;
    margin:auto;
 }
+#contact_form input[type = 'submit']:hover{
+    cursor: pointer;
+    background: #e4c580;
+    color: #35424a;   
+   }
+#note {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size:20px;
+    line-height: 1.5;
+    color:#e4c580;
+    /* padding: 5%;
+    margin: 5%; */
+}
+#note2 {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size:18px;
+    line-height: 1.5;
+    color:#e4c580;
+    text-shadow:0.4px 0.4px 0.4px #ddd;
+    
+    /* padding: 5%;
+    margin: 5%; */
+}
+#icon img{
+width:15%;
+margin-right:15%;
+}    
 
 blockquote {
     width: 80%;
     margin:auto;
     padding: 1em;
     margin-top: 3%;
-    background-color:rgb(226,226,226) ;
+    background-color:#e4c580;
     font-size: 2em;
     line-height: 1.2em;
     text-align: center;
@@ -222,63 +331,9 @@ blockquote {
     width:100%;
     border-radius: 5px;
 }
-
-h1{
-    margin:0;
-     padding: 0 0 20px; 
-     text-align: center;
-     font-size: 22px; 
-  }
-
-.loginbox p{
-    margin :0;
-    padding: 0;
-    font-weight: bold;
-}
-.loginbox input{
-    width :100%;
-    margin-bottom: 20px;
-
-}
-
-.loginbox input[type = 'text'],input[type ='password']{
-    border:none;
-    border-bottom: 1px solid #fff;
-    background:transparent;
-    outline : none;
-    height:40px;
-    color :#fff;
-    font-size: 16px;
-}
-
-.loginbox input[type ='submit']{
-    border:none;
-    outline: none;
-    height:40px;
-    background: rgb(247, 116, 2);
-    color:#fff;
-    font-size: 18px;
-    border-radius: 20px;
+ 
 
 
-}
-
-.loginbox input[type = 'submit']:hover{
-    cursor: pointer;
-    background: rgb(226,226,226);
-    color: #35424a;   
-   }
-
-.loginbox a{
-    text-decoration: none;
-    font-size: 12px;
-    line-height: 20px;
-    color : rgb(226,226,226);
-}
-
-.loginbox a:hover{
-    color:rgb(247, 116, 2);   
-   }
 .clearfix:before,
 .clearfix:after{
     content:' ';
@@ -289,19 +344,31 @@ h1{
     clear: both;
 }
 
-footer{
-    /* position: fixed;
-    left: 0;
-    bottom: 0; */
-    width: 100%;
-    background-color:rgb(247, 116, 2);
+#footer_section{
+    background-color:#080f5b;
     padding: 20px;
     margin-top: 4em;
     text-align: center;
-    color:rgb(226,226,226);
-    border-top: #35424a 3px solid; 
+
+    border-top: #e4c580 1.5px dashed; 
+        
+}
+
+footer{
+    /* /* position: fixed;
+    left: 0;
+    bottom: 0; */
+
+    width: 100%;
+    background-color: #0d19a3;
+    color:#e4c580;
+    clear: both;
+    padding: 20px;
+    margin:0px;
+    text-align: center;
      
 }
+
 
 
 @media screen and (min-width:600px){
@@ -323,6 +390,8 @@ footer{
         /* height:22em; */
         overflow: hidden;
     }
+
+
 }
 
 
@@ -336,12 +405,13 @@ footer{
     body{
      overflow-x: hidden;
     }
+   
      .nav-links{
         position: absolute;
         right:0px;
         height:92vh;
         top:8vh;
-        background-color: #35424a;
+        background-color: #080f5b;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -387,6 +457,18 @@ footer{
         transform: rotate(45deg ) translate(-5px,-6px);
         
     }
+
+    .formbox{
+        margin-top: 15%; 
+        width:90%;
+       
+    }
+    .contact_container{
+        width:80%;
+    
+     }
+
+   
 }
 
 
